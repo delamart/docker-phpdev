@@ -9,7 +9,7 @@ RUN	apt-get update && apt-get install -y \
 	unzip \
 	&& pecl install xdebug \
 	&& docker-php-ext-install pdo pdo_sqlite zip \
-  && docker-php-ext-enable xdebug
+  && docker-php-ext-enable xdebug \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
